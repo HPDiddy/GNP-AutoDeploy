@@ -1,6 +1,6 @@
 # node exporter systemd
 This script will auto deploy node_exporter to scrape metrics from a linux server
-Requirements
+# Requirements
 - Root/Sudo access
 - SystemD
 - curl
