@@ -4,5 +4,5 @@ Requirements
 - Root/Sudo access
 - SystemD
 - curl
-Node_Exporter will auto start after executing my script!
+# Node_Exporter will auto start after executing my script!
 
