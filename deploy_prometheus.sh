@@ -30,3 +30,4 @@ else
 		echo "prometheus service has finished installing...."
 	fi
 fi
+fi
