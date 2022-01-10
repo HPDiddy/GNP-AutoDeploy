@@ -11,15 +11,13 @@ then
 	echo "prometheus is already installed..."
 else
 	echo "installing prometheus now...."
-	cd /opt && mkdir prometheus
-	sleep 1
-	cd prometheus && wget https://github.com/prometheus/prometheus/releases/download/v2.32.1/prometheus-2.32.1.linux-amd64.tar.gz
-	sleep 2
-	tar -xvzf prometheus-2.32.1.linux-amd64.tar.gz && mv prometheus-2.32.1.linux-amd64/ promethus/
-	cd prometheus && mv * ..
+	cd /opt && wget https://github.com/prometheus/prometheus/releases/download/v2.32.1/prometheus-2.32.1.linux-amd64.tar.gz
+	sleep 3
+	tar -xvzf prometheus-2.32.1.linux-amd64.tar.gz && cd prometheus-2.32.1.linux-amd64/ 
+	mv * ..
 	#Clean up after your self timothy 
-	sudo rm prometheus-2.32.1.linux-amd64.tar.gz
-	cd .. && sudo rm -rf prometheus/
+	sudo rm /opt/prometheus-2.32.1.linux-amd64.tar.gz
+	cd /opt/prometheus && sudo rm -rf prometheus/
 	echo "Installing prometheus Systemd service"
 fi
 	if [ -f /etc/systemd/system/prometheus.service ]
