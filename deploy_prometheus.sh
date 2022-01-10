@@ -23,4 +23,5 @@ else
 		sudo systemctl start prometheus.service
 		echo "prometheus service has finished installing...."
 	fi
-		 
+		 echo "Install complete"
+		 fi
