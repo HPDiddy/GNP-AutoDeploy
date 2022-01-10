@@ -1,5 +1,11 @@
 #!/bin/bash
 #This script was created by http://github.com/hpDiddy/
+#We need to run as root first because we will be accessing the /opt directory
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
+#Install prometheus monitoring service
 if [ -d /opt/prometheus ]
 then
 	echo "prometheus is already installed..."
@@ -23,5 +29,4 @@ else
 		sudo systemctl start prometheus.service
 		echo "prometheus service has finished installing...."
 	fi
-		 echo "Install complete"
-		 fi
+		 
