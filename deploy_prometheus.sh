@@ -23,10 +23,9 @@ else
 	else
 		echo "Installing prometheus service file....."
 		sleep 3
-		cd /etc/system/systemd && wget https://raw.githubusercontent.com/HPDiddy/node_exporter-systemd/main/prometheus.service 
+		cd /etc/systemd/system && wget https://raw.githubusercontent.com/HPDiddy/node_exporter-systemd/main/prometheus.service 
 		sudo systemctl daemon-reload
 		sudo systemctl enable prometheus.service
 		sudo systemctl start prometheus.service
 		echo "prometheus service has finished installing...."
 	fi
-		 
