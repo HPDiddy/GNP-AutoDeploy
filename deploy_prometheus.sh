@@ -17,6 +17,7 @@ else
 	sleep 2
 	tar -xvzf prometheus-2.32.1.linux-amd64.tar.gz && mv prometheus-2.32.1.linux-amd64 promethus
 	echo "Installing prometheus Systemd service"
+fi
 	if [ -f /etc/systemd/system/prometheus.service ]
 	then 
 		echo "prometheus service is already installed"
@@ -28,6 +29,4 @@ else
 		sudo systemctl enable prometheus.service
 		sudo systemctl start prometheus.service
 		echo "prometheus service has finished installing...."
-	fi
-fi
 fi
