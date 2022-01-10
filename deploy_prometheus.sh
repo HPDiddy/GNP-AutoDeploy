@@ -13,8 +13,8 @@ else
 	echo "installing prometheus now...."
 	cd /opt && wget https://github.com/prometheus/prometheus/releases/download/v2.32.1/prometheus-2.32.1.linux-amd64.tar.gz
 	sleep 3
-	tar -xvzf prometheus-2.32.1.linux-amd64.tar.gz && cd prometheus-2.32.1.linux-amd64/ 
-	cd .. && mv prometheus-2.32.1.linux-amd64 prometheus
+	tar -xvzf prometheus-2.32.1.linux-amd64.tar.gz
+	mv prometheus-2.32.1.linux-amd64 prometheus
 	#Clean up after your self timothy 
 	sudo rm /opt/prometheus-2.32.1.linux-amd64.tar.gz
 	echo "Installing prometheus Systemd service"
