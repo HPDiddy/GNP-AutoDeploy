@@ -14,10 +14,9 @@ else
 	cd /opt && wget https://github.com/prometheus/prometheus/releases/download/v2.32.1/prometheus-2.32.1.linux-amd64.tar.gz
 	sleep 3
 	tar -xvzf prometheus-2.32.1.linux-amd64.tar.gz && cd prometheus-2.32.1.linux-amd64/ 
-	mv * ..
+	cd .. && mv prometheus-2.32.1.linux-amd64 prometheus
 	#Clean up after your self timothy 
 	sudo rm /opt/prometheus-2.32.1.linux-amd64.tar.gz
-	cd /opt/prometheus && sudo rm -rf prometheus/
 	echo "Installing prometheus Systemd service"
 fi
 	if [ -f /etc/systemd/system/prometheus.service ]
