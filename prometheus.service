@@ -1,0 +1,8 @@
+[Unit]
+Description=Prometheus
+
+[Service]
+ExecStart=/opt/prometheus/prometheus.sh
+
+[Install]
+WantedBy=multi-user.target
