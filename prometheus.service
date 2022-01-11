@@ -7,7 +7,9 @@ After=network-online.target
 User=root
 Restart=on-failure
 
-ExecStart=/opt/prometheus/prometheus.sh
+ExecStart=/opt/prometheus/prometheus.sh 
+--config.file=/opt/prometheus/prometheus/prometheus.yml \
+--storage.tsdb.path=/opt/prometheus/prometheus/data 
 
 [Install]
 WantedBy=multi-user.target
