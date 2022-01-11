@@ -41,13 +41,13 @@ fi
 clear
 echo "Checking Install..."
 sleep 2
-if [ -d /opt/prometheus/prometheus.yml ]
+if [ -f /opt/prometheus/prometheus.yml ]
 then
 echo "Prometheus Config File ✅"
   else
 echo "Prometheus Config File ❌"
 fi
-if [ -f /opt/prometheus/data ]
+if [ -d /opt/prometheus/data ]
 then
 echo "Prometheus Data Folder ✅"
   else
@@ -64,4 +64,4 @@ echo "The install is now complete and is accessible via http://*:9090 ✅"
 else
 echo "Missions Failed, We'll get em next time ❌"
 fi
-echo "Exiting...."
+echo "Prometheus is running...."
