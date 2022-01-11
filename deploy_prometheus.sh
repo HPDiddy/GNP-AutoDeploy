@@ -10,9 +10,13 @@ if [ -d /opt/prometheus ]
 then
 	echo "Prometheus is already installed ✅"
 else
-	echo "installing prometheus now...."
+	sleep 1
+	echo "Installing prometheus now...."
+	echo "Downloading Prometheus now...."
+	sleep 1
 	cd /opt && wget https://github.com/prometheus/prometheus/releases/download/v2.32.1/prometheus-2.32.1.linux-amd64.tar.gz
-	sleep 3
+	echo "Extracting prometheus into /opt"
+	sleep 2
 	tar -xvzf prometheus-2.32.1.linux-amd64.tar.gz && mv prometheus-2.32.1.linux-amd64 prometheus
 	cd prometheus
 	sudo mv prometheus prometheus.sh
@@ -52,6 +56,29 @@ then
 echo "Prometheus Data Folder ✅"
   else
 echo "Prometheus Config File ❌"
+	fi
+	sleep 2
+	if [ -d /opt/prometheus/consoles/ ]
+	then
+		if [ -f /opt/prometheus/consoles/node.html ]
+		then
+			if [ -f /opt/prometheus/consoles/node-cpu.html ]
+			then
+				if [ -f /opt/prometheus/consoles/node-disk.html ]
+				then
+					if [ -f /opt/prometheus/consoles/node-overview.html ]
+					then
+						if [ -f /opt/prometheus/consoles/prometheus.html ]
+						then
+							if [ -f /opt/prometheus/consoles/prometheus-overview.html ]
+							then
+								sleep 1
+							fi
+						fi
+					fi
+				fi
+			fi
+		fi
 	fi
 if [ -f /etc/systemd/system/prometheus.service ]
 then
