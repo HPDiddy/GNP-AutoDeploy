@@ -6,7 +6,7 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 #Install prometheus monitoring service
-function inst_prom {
+function inst_prom() {
 if [ -d /opt/prometheus ]
 then
 	echo "prometheus is already installed..."
@@ -25,7 +25,7 @@ else
 	echo "Prometheus directory was installed sucessfully"
 	}
 inst_prom
-function inst_prom_svc {
+function inst_prom_svc() {
 	sleep 2
 	echo "Installing prometheus Systemd service"
 fi
