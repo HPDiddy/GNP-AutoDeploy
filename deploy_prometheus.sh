@@ -15,8 +15,8 @@ else
 	sleep 3
 	tar -xvzf prometheus-2.32.1.linux-amd64.tar.gz && mv prometheus-2.32.1.linux-amd64 prometheus
 	cd prometheus
-	sudo mv prometheus prometheus,sh
-	sudo chmod +x prometheus
+	sudo mv prometheus prometheus.sh
+	sudo chmod +x prometheus.sh
 	cd ..
 	sleep 1
 	sudo rm prometheus-2.32.1.linux-amd64.tar.gz
