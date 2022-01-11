@@ -1,18 +1,13 @@
 [Unit]
-Description=Prometheus
-user=mxnovah
-Wants=network-online.target
+Description=Prometheus Server
+Documentation=https://prometheus.io/docs/introduction/overview/
 After=network-online.target
 
 [Service]
-User=prometheus
-Group=prometheus
-Type=simple
-ExecStart=/opt/prometheus/prometheus \
-    --config.file /opt/prometheus/prometheus.yml \
-    --storage.tsdb.path /opt/prometheus/data/ \
-    --web.console.templates=/opt/prometheus/consoles \
-    --web.console.libraries=/opt/prometheus/console_libraries
+User=mxnovah
+Restart=on-failure
+
+ExecStart=/opt/prometheus/prometheus.sh --storage.tsdb.path=/opt/prometheus/data/ --web.console.templates=/opt/prometheus/consoles -web.console.libraries=/opt/prometheus/console_libraries
 
 [Install]
 WantedBy=multi-user.target
