@@ -15,7 +15,7 @@ rm_prom_dir
 function rm_prom_service {
 	sudo systemctl stop prometheus.service
 	sudo systemctl disable prometheus.service
-	sudo systemctl daemon-reload
 	sudo rm /etc/systemd/system/prometheus.service
+	sudo systemctl daemon-reload
 }
 rm_prom_service
