@@ -64,3 +64,4 @@ echo "The install is now complete and is accessible via http://*:9090 ✅"
 else
 echo "Missions Failed, We'll get em next time ❌"
 fi
+echo "Prometheus is running...."
