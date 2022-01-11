@@ -24,8 +24,8 @@ else
 	sudo rm prometheus-2.32.1.linux-amd64.tar.gz
 	echo "Prometheus directory was installed sucessfully"
 }
-install_prom
-function ins_prom_svc {
+inst_prom
+function inst_prom_svc {
 	sleep 2
 	echo "Installing prometheus Systemd service"
 fi
@@ -43,4 +43,4 @@ echo "Installing prometheus service file....."
 		sudo systemctl status prometheus.service
 fi
 }
-ins_prom_svc
+inst_prom_svc
