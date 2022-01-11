@@ -58,6 +58,9 @@ echo "Prometheus Config File ✅"
   else
 echo "Prometheus Config File ❌"
 fi
+if [ -f /opt/prometheus ]
+then
 echo "The install is now complete and is accessible via http://*:9090"
-fi
+else
+echo "Install Failed...."
 fi
