@@ -2,7 +2,7 @@
 Description=Prometheus
 
 [Service]
-ExecStart=/opt/prometheus/prometheus.sh
+ExecStart=/opt/prometheus/prometheus
 
 [Install]
 WantedBy=multi-user.target
