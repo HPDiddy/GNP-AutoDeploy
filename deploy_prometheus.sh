@@ -46,22 +46,23 @@ then
 echo "Prometheus Config File ✅"
   else
 echo "Prometheus Config File ❌"
-fi
+	fi
 if [ -d /opt/prometheus/data ]
 then
 echo "Prometheus Data Folder ✅"
   else
 echo "Prometheus Config File ❌"
+	fi
 if [ -f /etc/systemd/system/prometheus.service ]
 then
 echo "Prometheus Config File ✅"
   else
 echo "Prometheus Config File ❌"
-fi
+	fi
 if [ -f /opt/prometheus/prometheus.sh ]
 then
 echo "The install is now complete and is accessible via http://*:9090 ✅"
 else
 echo "Missions Failed, We'll get em next time ❌"
-fi
+	fi
 exit
