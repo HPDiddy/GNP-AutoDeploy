@@ -14,6 +14,11 @@ else
 	cd /opt && wget https://github.com/prometheus/prometheus/releases/download/v2.32.1/prometheus-2.32.1.linux-amd64.tar.gz
 	sleep 3
 	tar -xvzf prometheus-2.32.1.linux-amd64.tar.gz && mv prometheus-2.32.1.linux-amd64 prometheus
+	cd prometheus
+	sudo mv prometheus prometheus,sh
+	sudo chmod +x prometheus
+	cd ..
+	sleep 1
 	sudo rm prometheus-2.32.1.linux-amd64.tar.gz
 	echo "Prometheus directory was installed sucessfully"
 	sleep 2
