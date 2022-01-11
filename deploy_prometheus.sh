@@ -30,4 +30,5 @@ echo "Installing prometheus service file....."
 		sudo systemctl enable prometheus.service
 		sudo systemctl start prometheus.service
 		echo "prometheus service has finished installing...."
+		sudo systemctl status prometheus.service
 fi
