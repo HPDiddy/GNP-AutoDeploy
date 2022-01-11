@@ -6,7 +6,6 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 #Install prometheus monitoring service
-function inst_prom () {
 if [ -d /opt/prometheus ]
 then
 	echo "prometheus is already installed..."
@@ -23,9 +22,6 @@ else
 	sleep 1
 	sudo rm prometheus-2.32.1.linux-amd64.tar.gz
 	echo "Prometheus directory was installed sucessfully"
-	}
-inst_prom
-function inst_prom_svc () {
 	sleep 2
 	echo "Installing prometheus Systemd service"
 fi
@@ -42,5 +38,4 @@ echo "Installing prometheus service file....."
 		echo "prometheus service has finished installing...."
 		sudo systemctl status prometheus.service
 fi
-	}
-inst_prom_svc
+echo "The install is now complete and is accessible via http://*:9090"
