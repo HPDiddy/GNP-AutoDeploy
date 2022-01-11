@@ -7,7 +7,7 @@ After=network-online.target
 User=mxnovah
 Restart=on-failure
 
-ExecStart=/opt/prometheus/prometheus.sh --storage.tsdb.path=/opt/prometheus/data/ --web.console.templates=/opt/prometheus/consoles -0web.external-url=http://0.0.0.0:9090 --web.console.libraries=/opt/prometheus/console_libraries
+ExecStart=/opt/prometheus/prometheus.sh --storage.tsdb.path=/opt/prometheus/data/ --web.console.templates=/opt/prometheus/consoles --web.external-url=http://0.0.0.0:9090 --web.console.libraries=/opt/prometheus/console_libraries
 
 [Install]
 WantedBy=multi-user.target
