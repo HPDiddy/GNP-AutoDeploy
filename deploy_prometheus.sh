@@ -73,6 +73,8 @@ echo "Prometheus Config File ❌"
 							if [ -f /opt/prometheus/consoles/prometheus-overview.html ]
 							then
 								sleep 1
+								else
+								echo "Check failed ❌"
 							fi
 						fi
 					fi
