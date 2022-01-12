@@ -43,6 +43,7 @@ echo "Installing prometheus service file....."
 		sudo systemctl status prometheus.service
 fi
 clear
+#Check that the installation was sucessful
 echo "Checking Install..."
 sleep 2
 if [ -f /opt/prometheus/prometheus.yml ]
@@ -72,7 +73,8 @@ echo "Prometheus Config File ❌"
 						then
 							if [ -f /opt/prometheus/consoles/prometheus-overview.html ]
 							then
-								sleep 1
+								echo "Prometheus Console Directory ✅"
+								sleep 3
 								else
 								echo "Check failed ❌"
 							fi
@@ -90,8 +92,18 @@ echo "Prometheus Config File ❌"
 	fi
 if [ -f /opt/prometheus/prometheus.sh ]
 then
-echo "The install is now complete and is accessible via http://*:9090 ✅"
+echo "Prometheus script ✅"
 else
-echo "Missions Failed, We'll get em next time ❌"
+echo "Prometheus script ❌"
 	fi
+	sleep 2
+	echo "Checking if Prometheus is running...."
+if pgrep -x "prometheus" > /dev/null
+then
+   sleep 1
+   echo "Prometheus is running...."
+    echo "Install Complete, You can now browse prometheus via http://*:9090"
+else
+    echo "Install Failed ❌"
+fi
 exit
