@@ -14,17 +14,17 @@ else
 	echo "Installing prometheus now...."
 	echo "Downloading Prometheus now...."
 	sleep 1
-	cd /opt && wget https://github.com/prometheus/prometheus/releases/download/v2.32.1/prometheus-2.32.1.linux-amd64.tar.gz
+	cd /opt && wget https://github.com/prometheus/prometheus/releases/download/v2.35.0/prometheus-2.35.0.linux-amd64.tar.gz
 	echo "Extracting prometheus into /opt"
 	sleep 2
-	tar -xvzf prometheus-2.32.1.linux-amd64.tar.gz && mv prometheus-2.32.1.linux-amd64 prometheus
+	tar -xvzf prometheus-2.35.0.linux-amd64.tar.gz && mv prometheus-2.35.0.linux-amd64 prometheus
 	cd prometheus
 	sudo mv prometheus prometheus.sh
 	sudo mkdir data
 	sudo chmod +x prometheus.sh
 	cd ..
 	sleep 1
-	sudo rm prometheus-2.32.1.linux-amd64.tar.gz
+	sudo rm prometheus-2.35.0.linux-amd64.tar.gz
 	echo "Prometheus directory was installed sucessfully"
 	sleep 2
 	echo "Installing prometheus Systemd service...."
