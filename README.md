@@ -1,5 +1,6 @@
 # GNP-AutoDeploy
-This script will auto deploy node_exporter to scrape metrics from a linux server
+This is a collection of scripts that will deploy either Prometheus node_exporter, or grafana. Depending on what you would like to install.
+Note: I will add a "master" script soon that will just install all three. its a wip
 # Requirements
 - Root/Sudo access
 - SystemD
