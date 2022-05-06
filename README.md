@@ -1,4 +1,4 @@
-# node exporter systemd
+# GNP-AutoDeploy
 This script will auto deploy node_exporter to scrape metrics from a linux server
 # Requirements
 - Root/Sudo access
@@ -6,5 +6,5 @@ This script will auto deploy node_exporter to scrape metrics from a linux server
 - curl
 - A running prometheus instance
 - Linux server with amd64 architecture 
-# Node_Exporter will auto start after executing my script!
+# Node_Exporter will auto start after executing the script!
 
