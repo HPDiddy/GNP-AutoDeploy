@@ -2,7 +2,7 @@
 Description=Node Exporter scrapes system metrics
 
 [Service]
-ExecStart=/opt/node_exporter/node_exporter/node_exporter --web.config=/opt/prometheus/prometheus/web.yaml
+ExecStart=/opt/node_exporter/node_exporter/node_exporter --web.config=/opt/node_exporter/node_exporter/config.yaml
 
 [Install]
 WantedBy=multi-user.target
