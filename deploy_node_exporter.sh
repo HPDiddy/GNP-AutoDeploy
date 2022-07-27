@@ -11,6 +11,7 @@ else
 	sudo mkdir /opt/node_exporter
 	sudo wget https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_exporter-1.3.1.linux-amd64.tar.gz -P /opt/node_exporter
 	cd /opt/node_exporter
+	touch config.yaml
 	sudo tar -xvzf node_exporter-1.3.1.linux-amd64.tar.gz
 	sudo rm node_exporter-1.3.1.linux-amd64.tar.gz
 	sudo mv node_exporter-1.3.1.linux-amd64 node_exporter
