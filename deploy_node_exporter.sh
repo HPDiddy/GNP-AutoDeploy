@@ -9,13 +9,13 @@ else
 	#Download and install node_exporter 1.3.1
 	echo "Installing node_exporter version 1.3.1"
 	sudo mkdir /opt/node_exporter
-	sudo wget https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_exporter-1.3.1.linux-amd64.tar.gz -P /opt/node_exporter
+	sudo wget https://github.com/prometheus/node_exporter/releases/download/v1.4.0/node_exporter-1.4.0.linux-amd64.tar.gz -P /opt/node_exporter
 	cd /opt/node_exporter
 	touch config.yaml
-	sudo tar -xvzf node_exporter-1.3.1.linux-amd64.tar.gz
-	sudo rm node_exporter-1.3.1.linux-amd64.tar.gz
-	sudo mv node_exporter-1.3.1.linux-amd64 node_exporter
-	cd /opt/node_exporter/node_exporter-1.3.1-amd64
+	sudo tar -xvzf node_exporter-1.4.0.linux-amd64.tar.gz 
+	sudo rm node_exporter-1.4.0.linux-amd64.tar.gz
+	sudo mv node_exporter-1.4.0.linux-amd64 node_exporter
+	cd /opt/node_exporter/node_exporter-1.4.0.linux-amd64
 fi
 # Now we need to create a systemd service for node_exporter so we can manage it.
 if [ -d /etc/systemd/system ]
